@@ -18,7 +18,7 @@ void setup() {
   pinMode(ledRojoPin, OUTPUT);
   pinMode(ledAmbarPin, OUTPUT);
   pinMode(ledVerdePin, OUTPUT);
-  // Inicializamos el botón como entrada a 5v en reposo
+  // Inicializamos el botón como entrada a 5v en reposo activando la resistencia pull-up interna
   pinMode(botonPin, INPUT_PULLUP);
 }
 

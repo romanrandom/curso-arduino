@@ -12,6 +12,6 @@ void setup() {
 
 void loop() {
 
-  disp.writeDigit(2);
+  disp.writeDigit('R');
   disp.setDP(); // Enciende el punto
 }
