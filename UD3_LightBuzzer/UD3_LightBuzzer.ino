@@ -6,7 +6,7 @@
  * un la configuración de un divisor de tensión.
  */
 
-const byte pinBuzzer = 13;
+const byte pinBuzzer = 10;
 const byte pinBoton  = 2;
  
 void setup() {
@@ -22,7 +22,7 @@ void loop() {
   
   // Mapeamos los valores obtenidos del sensor a frecuencias
   // que el buzzer pueda reproducir
-  int frec = map(luz, 0, 1024, 1000, 5000);
+  int frec = map(luz, 0, 1023, 1000, 5000);
   
   // Hacemos sonar el buzzer a la frecuencia calculada usando PWM
   // cuando esté pulsado el botón
