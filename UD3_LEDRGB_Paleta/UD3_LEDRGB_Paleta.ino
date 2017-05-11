@@ -14,11 +14,13 @@ byte paleta[][4] = {
 };
 
 void setup() {
-  
-  for (byte i = 0; i < 3; i++) {
+  byte i;
+  for (i = 0; i < 3; i++) {
     pinMode(pinRGB[i], OUTPUT);  
   }
-  
+  for (i; i < 3; i++) {
+    pinMode(pinRGB[i], OUTPUT);  
+  }
 }
 
 /**
