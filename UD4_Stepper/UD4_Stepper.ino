@@ -6,9 +6,9 @@
 const byte fases = 4;
 
 const float anguloPorPaso = 5.625;
-const float reduccion = 63.68395;        // 64 según especificación, pero éste es el valor real
+const float reduccion = 64;
 const int pasosPorVuelta = 360 / anguloPorPaso * reduccion;
-const int pasosTotales = 0.2 * pasosPorVuelta;
+const int pasosTotales = 1 * pasosPorVuelta;
 
 // Usamos una secuencia tipo "wave"
 const int pasos = 8;
@@ -72,7 +72,7 @@ void siguientePaso() {
     pasoActual--;
   }
 
-  pasoActual = ( pasoActual + pasos ) % pasos;    // Nos aseguramos de que se queda entre 0 y 3
+  pasoActual = ( pasoActual + pasos ) % pasos;    // Nos aseguramos de que se queda entre 0 y número de pasos
 }
 
 
