@@ -8,7 +8,7 @@ const byte fases = 4;
 const float anguloPorPaso = 5.625;
 const float reduccion = 64;
 const int pasosPorVuelta = 360 / anguloPorPaso * reduccion;
-const int pasosTotales = 1 * pasosPorVuelta;
+const int pasosTotales = 1 * pasosPorVuelta;      // Número de pasos que queremos que gire
 
 // Usamos una secuencia tipo "wave"
 const int pasos = 8;
