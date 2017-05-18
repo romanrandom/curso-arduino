@@ -3,7 +3,8 @@ import processing.serial.*;
 Serial serie;
 String recibido;
 
-float x = 0;
+String posicion[];
+int x, y;
 boolean direccion = true;
 
 void setup() {
@@ -22,14 +23,21 @@ void draw() {
     recibido = serie.readStringUntil(13);
     
     if (recibido != null) {
-      x = float(recibido);
+      
+      posicion = split(recibido, ',');
+      
+      if (posicion.length == 2) {
+        y = int( map(float(posicion[1]), 0, 1023, 0, height) );
+        x = int( map(float(posicion[0].trim()), 0, 1023, 0, width) );
+      }
+      
+           
+ 
     }
   }
   
   background(0, 100, 0);
-  
-  float xm = map(x, 0, 1023, 0, width);
-  //println(x);
+
   fill(255, 0, 0);
-  ellipse(xm, height/5 + 150*noise(millis()/1000f), 10, 10);
+  ellipse(x, y, 10, 10);
 }

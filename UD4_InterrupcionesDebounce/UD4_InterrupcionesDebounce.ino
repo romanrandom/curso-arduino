@@ -17,7 +17,7 @@ void setup() {
   Serial.begin(9600);
   Serial.println("Dale!"); 
   pinMode(2, INPUT_PULLUP);
-  attachInterrupt( 0, incrementaContador, LOW);
+  attachInterrupt( 0, incrementaContador, FALLING);
 } 
 
 void loop() {   
@@ -30,7 +30,7 @@ void loop() {
 void incrementaContador() {
   
   // El valor que devuelve millis() se congela hasta salir del callback 
-  if ( millis() > (t + 50) ) {
+  if ( millis() > (t + 500) ) {
     contador++ ;
     t = millis();
   }
