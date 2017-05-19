@@ -5,6 +5,7 @@
 */
 
 String claveAPI = "xxxxxxxx";
+
 String query = "q=bilbao&units=metric&lang=es";
 
 void setup() {
