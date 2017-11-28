@@ -1,23 +1,25 @@
-// constantes, no cambian
+// constantes, no se pueden cambiar una vez definidas
 const int botonPin = 2;
 const int ledRojoPin =  13;
 const int ledAmbarPin =  12;
 const int ledVerdePin =  11;
 
-// variables, cambian
-int estadoSemaforo = 0;       // 0-verde 1-ámbar 2-rojo
+// variables, se pueden cambiar más adelante
+int estadoSemaforo = 0;       // 0->verde 1->ámbar 2->rojo
 int estadoBoton = 0;          // estado actual del botón
 int ultimoEstadoBoton = HIGH;
 
 // Usamos unsigned long ya que el tiempo en milisegundos crece muy rápido y sale del rango de los int
-unsigned long lastDebounceTime = 0;  // la última vez que algún pin de salida se activó
-unsigned long debounceDelay = 50;    // tiempo de debounce; aumentar si la salida parpadea
+unsigned long lastDebounceTime = 0;  // la última vez que el pin del pulsador se activó
+unsigned long debounceDelay = 50;    // tiempo de debounce; aumentar si hace falta
 
 void setup() {
-  // Inicializamos los pin de los LED
+  
+  // Inicializamos los pines de los LED
   pinMode(ledRojoPin, OUTPUT);
   pinMode(ledAmbarPin, OUTPUT);
   pinMode(ledVerdePin, OUTPUT);
+  
   // Inicializamos el botón como entrada a 5v en reposo activando la resistencia pull-up interna
   pinMode(botonPin, INPUT_PULLUP);
 }
@@ -38,10 +40,10 @@ void loop() {
 
   if ((millis() - lastDebounceTime) > debounceDelay) {
  
-    // El pin del botón lleva leyendo el mismo valor durante más tiempo que el retraso de debounce,
+    // El pin del botón lleva leyendo el mismo valor durante más tiempo que el retardo de debounce,
     // así que asumimos que es el estado actual
 
-    // Si el esado ha cambiado
+    // Si el estado ha cambiado
     if (leyendo != estadoBoton) {
       estadoBoton = leyendo;
       
