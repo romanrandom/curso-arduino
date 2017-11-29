@@ -117,8 +117,6 @@ void loop() {
 
 
   /*** Parpadeo LED Ámbar ***/
-
-  // Sólo hacemos los cálculos si estamos en el estado correspondiente
   if (estadoSemaforo == 1) {
   
     digitalWrite(ledAmbarPin, estadoAmbar);
