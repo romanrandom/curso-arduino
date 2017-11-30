@@ -2,7 +2,7 @@
  * Unidad 2: SevenSeg con cuenta atrás
  * 
  * Usando la librería SevenSeg y SimpleTimer,
- * crearemos una cuenta atrás al estilo de "The Final Countdown" 
+ * crearemos una cuenta atrás
  * en un display de 7 segmentos
  */
  
