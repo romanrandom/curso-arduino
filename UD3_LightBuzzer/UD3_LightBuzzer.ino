@@ -3,7 +3,7 @@
  * 
  * Hacemos sonar un altavoz piezoeléctrico (buzzer)
  * con un LDR (Light Dependant Resistor) usando
- * un la configuración de un divisor de tensión.
+ * la configuración de un divisor de tensión.
  */
 
 const byte pinBuzzer = 10;
