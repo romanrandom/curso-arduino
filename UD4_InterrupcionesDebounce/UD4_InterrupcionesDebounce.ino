@@ -10,7 +10,7 @@ volatile int contador = 0;   // "volatile" se usa para indicar al programa
                              // al optimizar código por no ser usada dentro del programa
 int n = contador;
 
-long t = 0;                 // Variable global para tiempo
+unsigned long t = 0;                 // Variable global para tiempo
 
 void setup() {    
 
@@ -29,8 +29,9 @@ void loop() {
 
 void incrementaContador() {
   
-  // El valor que devuelve millis() se congela hasta salir del callback 
-  if ( millis() > (t + 500) ) {
+  // NOTA: El valor que devuelve millis() se congela hasta salir del callback 
+  
+  if ( millis() > (t + 100) ) {
     contador++ ;
     t = millis();
   }
