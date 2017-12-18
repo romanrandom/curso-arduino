@@ -36,3 +36,4 @@ void incrementaContador() {
     t = millis();
   }
 }
+

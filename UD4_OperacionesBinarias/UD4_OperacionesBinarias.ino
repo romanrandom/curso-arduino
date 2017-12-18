@@ -1,7 +1,7 @@
 /**
  * Unidad 4: Operaciones binarias
  * 
- * Usando las constantes predefinidas DDRD (pinMode de los pines digitales)
+ * Usando los registros DDRD (pinMode de los pines digitales)
  * y PORTD (estado de los pines digitales) vemos la utilidad
  * de las operaciones binarias &, | y <<
  */

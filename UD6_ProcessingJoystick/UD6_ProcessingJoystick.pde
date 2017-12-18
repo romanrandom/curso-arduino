@@ -18,8 +18,8 @@ void setup() {
 
 void draw() {
   
-  if ( serie.available() > 0) {  // If data is available,
-    //x = serie.read();         // read it and store it in val
+  if ( serie.available() > 0) {
+    
     recibido = serie.readStringUntil(13);
     
     if (recibido != null) {
